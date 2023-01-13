@@ -8,11 +8,11 @@ from dotenv import load_dotenv
 # add bot-token in API_KEY
 # add True for emoji ui deployment
 load_dotenv('config.env', override=True)
-API_KEY = os.getenv("API_KEY")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 EMOJI_UI = os.getenv("EMOJI_UI")
 
 # connecting to the telegram bot
-bot = telebot.TeleBot(API_KEY)
+bot = telebot.TeleBot(BOT_TOKEN)
 
 # start command (/start)
 @bot.message_handler(commands=['start'])
